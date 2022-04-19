@@ -1,30 +1,30 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE QUIZ</title>
 </head>
+
 <body>
-    <div class="timer-container">
-        <h5>Total Time : <br> (00: <span id="time">00)</span></h5>
+    <!-- link to Highscore -->
+    <a id="highscore" href="./highscore.html">
+        View the Highscores
+        <div id="currentTime"></div>
+    </a>
+    <br>
+    <div id="wrapper">
+        
+        <div id="questions">
+            <h1>Coding Quiz Challange</h1>
+            <p id="text">Try to answer as many of the following questions correctly before the time runs out.</p>
+            <ul id="choices"></ul>
+            <!-- Start button -->
+            <button id="startTime">Start Quiz</button>
+        </div>
+
     </div>
-   <div class="container">
-       <div id="question-container" class="hide">
-           <div id="question">Question</div>
-           <div id="answer-buttons" class="btn-grid">
-               <button class="btn">Answer 1</button>
-               <button class="btn">Answer 2</button>
-               <button class="btn">Answer 3</button>
-               <button class="btn">Answer 4</button>
-           </div>
-       </div>
-       <div class="controls">
-           <button id="start-btn" class="start-btn btn">Start</button>
-           <button id="next-btn" class="next-btn btn hide">Next</button>
-       </div>
-   </div>
+    <script src="./assets/script.js"></script>
+    
 </body>
 </html>
