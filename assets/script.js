@@ -112,12 +112,12 @@ function compare(event) {
     } else {
         render(questionIndex);
     }
-    questionDiv.appendChild(createDiv);
+    questionsDiv.appendChild(createDiv);
 
 }
 
 function allDone() {
-    questionDiv.innerHTML = "";
+    questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
 
     //heading
@@ -125,13 +125,13 @@ function allDone() {
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "ALL DONE!"
 
-    questionDiv.appendChild(createH1);
+    questionsDiv.appendChild(createH1);
 
     // paragraph
     var createP = document.createElement("p");
     createP.setAttribute("id", "createP");
 
-    questionDiv.appendChild(createP);
+    questionsDiv.appendChild(createP);
 
     // calculates time remaining and adds it to highscore
     if (secondsLeft >= 0) {
@@ -140,7 +140,7 @@ function allDone() {
         clearInterval(holdInterval);
         createP.textContent = "YOUR FINAL SCORE IS: " + timeRemaining;
 
-        questionDiv.appendChild(createP2);
+        questionsDiv.appendChild(createP2);
     }
 
     // label
@@ -148,7 +148,7 @@ function allDone() {
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "ENTER YOUR INITIALS: ";
 
-    questionDiv.appendChild(createLabel);
+    questionsDiv.appendChild(createLabel);
 
     //input
     var createInput = document.createElement("input");
@@ -156,7 +156,7 @@ function allDone() {
     createInput.setAttribute("id", "initials");
     createInput.textContent = "";
 
-    questionDiv.appendChild(createInput);
+    questionsDiv.appendChild(createInput);
 
     //submit
     var createSubmit = document.createElement("button");
